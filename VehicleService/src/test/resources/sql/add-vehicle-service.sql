@@ -1,0 +1,1 @@
+INSERT INTO test.vehicle_service (name, country, city, address) VALUES ('Bosch Svc', 'Poland', 'Bytom', 'Falista, 11a');

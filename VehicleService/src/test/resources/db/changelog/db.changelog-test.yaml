@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/changelogs/create_test_schema.sql
+  - include:
+      file: liquibase/changelogs/add_vehicle_test_table.sql

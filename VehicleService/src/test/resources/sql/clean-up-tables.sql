@@ -1,0 +1,1 @@
+TRUNCATE TABLE vehicle_service;

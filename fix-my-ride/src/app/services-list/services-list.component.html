@@ -1,0 +1,12 @@
+<div class="services-list" style="text-align: center">
+    <h1>Car Services</h1>
+    <ul>
+        <li *ngFor="let vehicleService of vehicleServices">
+            <span>Name: </span> <p>{{vehicleService.name}}<br>
+            <img display="block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQBqsb8nMMnptx4173Fe3fzGV5sBy855Iydg&usqp=CAU"/><br>
+            <span>Country: </span> {{vehicleService.country}}<br>
+            <span>City: </span> {{vehicleService.city}}<br>
+            <span>Street: </span> {{vehicleService.address}}<br>
+        </li>
+    </ul>
+</div>
