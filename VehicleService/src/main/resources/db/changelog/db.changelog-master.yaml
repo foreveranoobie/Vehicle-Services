@@ -1,3 +1,9 @@
 databaseChangeLog:
   - include:
       file: liquibase/changelogs/add_vehicle_table.sql
+  - include:
+      file: liquibase/changelogs/add_authority_table.sql
+  - include:
+      file: liquibase/changelogs/add_user_table.sql
+  - include:
+      file: liquibase/changelogs/add_user_authority_table.sql
