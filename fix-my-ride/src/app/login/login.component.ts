@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
         },
         error(msg) {
           console.log(msg);
+          
         },
         complete() {
           isAuthenticated = true;

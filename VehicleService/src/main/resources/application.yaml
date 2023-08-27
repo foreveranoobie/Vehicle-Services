@@ -2,12 +2,23 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+        security: TRACE
+        data: DEBUG
+        jpa: DEBUG
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/vehicle
     username: vehicle
     password: password
   jpa:
+    security:
+      basic:
+        enabled: false
     hibernate:
       ddl-auto: none
     show-sql: true
