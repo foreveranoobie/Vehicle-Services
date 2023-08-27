@@ -1,0 +1,9 @@
+<div>
+<button type="button" [hidden]="isAuthenticated" onclick="document.getElementById('auth').style.visibility='visible'">Login</button>
+<div id="auth" style="visibility: hidden">
+    <p onclick="document.getElementById('auth').style.visibility='hidden'">X</p>
+    <app-login></app-login>
+</div>
+<button type="button" [hidden]="isAuthenticated">Register</button>
+<button type="button" [hidden]="!isAuthenticated">Logout</button>
+</div>
