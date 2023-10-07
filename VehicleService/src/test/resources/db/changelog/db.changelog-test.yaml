@@ -1,5 +1,23 @@
 databaseChangeLog:
   - include:
-      file: liquibase/changelogs/create_test_schema.sql
+      file: liquibase/test-changelogs/create_test_schema.sql
   - include:
-      file: liquibase/changelogs/add_vehicle_test_table.sql
+      file: liquibase/test-changelogs/add_vehicle_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_authority_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_user_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_user_authority_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_vehicle_type_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_vehicle_types.sql
+  - include:
+      file: liquibase/test-changelogs/add_vehicle_service_vehicle_type_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_provided_service_table.sql
+  - include:
+      file: liquibase/test-changelogs/add_provided_services.sql
+  - include:
+      file: liquibase/test-changelogs/add_vehicle_service_provided_services_table.sql

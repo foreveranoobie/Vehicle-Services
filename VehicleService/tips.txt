@@ -1,0 +1,3 @@
+----Launching liquibase scripts
+1. set "true" flag for server.liquibase.enable
+2. run mvn liquibase:update

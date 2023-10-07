@@ -3,30 +3,22 @@ package com.test.unit.controller;
 import com.test.controller.VehicleServiceController;
 import com.test.exception.ResourceNotFoundException;
 import com.test.service.VehicleServiceService;
-import jakarta.validation.ValidationException;
-import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.assertj.core.api.ClassBasedNavigableIterableAssert.assertThat;
+import static org.assertj.core.api.Assertions.catchThrowableOfType;
 
-@RunWith(JUnit4.class)
+@RunWith(MockitoJUnitRunner.class)
 public class VehicleServiceControllerTest {
     @Mock
     private VehicleServiceService vehicleServiceService;
 
     @InjectMocks
     private VehicleServiceController sut;
-
-    @Before
-    public void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     public void shouldThrowValidationExceptionOnIdEqualsToZero() {
@@ -37,6 +29,6 @@ public class VehicleServiceControllerTest {
         Throwable throwable = catchThrowableOfType(() -> sut.getVehicleServiceById(id), ResourceNotFoundException.class);
 
         //then
-        System.out.println("");
+        Assertions.assertThat(throwable).hasMessage("Vehicle service with id 0 not found");
     }
 }

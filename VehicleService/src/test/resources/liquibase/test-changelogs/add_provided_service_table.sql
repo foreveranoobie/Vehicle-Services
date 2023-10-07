@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS test.provided_service (
+  ID SERIAL PRIMARY KEY,
+  NAME text NOT NULL UNIQUE
+);

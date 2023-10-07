@@ -16,5 +16,5 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         default_schema: test
   liquibase:
-    enabled: false
-    change-log: db/changelog/db.changelog-test.yaml
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-test.yaml

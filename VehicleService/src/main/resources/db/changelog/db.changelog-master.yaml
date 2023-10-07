@@ -7,3 +7,11 @@ databaseChangeLog:
       file: liquibase/changelogs/add_user_table.sql
   - include:
       file: liquibase/changelogs/add_user_authority_table.sql
+  - include:
+      file: liquibase/changelogs/add_vehicle_type_table.sql
+  - include:
+      file: liquibase/changelogs/add_vehicle_service_vehicle_type_table.sql
+  - include:
+      file: liquibase/changelogs/add_provided_service_table.sql
+  - include:
+      file: liquibase/changelogs/add_vehicle_service_provided_services_table.sql

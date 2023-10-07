@@ -1,6 +1,7 @@
 package com.test.service;
 
 import com.test.dto.VehicleServiceCreateDto;
+import com.test.dto.VehicleServiceSearchDto;
 import com.test.entity.VehicleService;
 
 import java.util.List;
@@ -12,4 +13,10 @@ public interface VehicleServiceService {
     List<VehicleService> findAll();
 
     int save(VehicleServiceCreateDto vehicleServiceCreateDto);
+
+    List<VehicleService> findAllByCriteria(VehicleServiceSearchDto dto);
+
+    Long countByCriteria(VehicleServiceSearchDto dto);
+
+    Long countAll();
 }

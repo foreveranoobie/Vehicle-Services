@@ -1,6 +1,7 @@
 package com.test.controller;
 
 import com.test.dto.VehicleServiceCreateDto;
+import com.test.dto.VehicleServiceSearchDto;
 import com.test.entity.VehicleService;
 import com.test.exception.ResourceNotFoundException;
 import com.test.service.VehicleServiceService;
@@ -34,5 +35,20 @@ public class VehicleServiceController {
     @GetMapping
     public List<VehicleService> getAllVehicleServices() {
         return vehicleServiceService.findAll();
+    }
+
+    @PostMapping("/filter")
+    public List<VehicleService> getByFilteringCriteria(VehicleServiceSearchDto dto) {
+        return vehicleServiceService.findAllByCriteria(dto);
+    }
+
+    @PostMapping("/filter/count")
+    public Long countByFilteringCriteria(VehicleServiceSearchDto dto) {
+        return vehicleServiceService.countByCriteria(dto);
+    }
+
+    @GetMapping("/count")
+    public long countAll() {
+        return vehicleServiceService.countAll();
     }
 }
